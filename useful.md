@@ -86,17 +86,16 @@ john hashes.txt --format=NT --wordlist=password.txt
 
 ### Brute Force FTP
 ```bash
-hydra -L Username.txt -P Passwords.txt 172.16.0.12 ftp
+hydra -L Username.txt -P Passwords.txt IP ftp
 ```
 
 ### Access FTP
 ```bash
-ftp 172.16.0.12
+ftp IP
 
 ftp> ls
 ftp> mget *
 
-cat flag.txt
 ```
 
 ### GUI Password Auditing
@@ -110,7 +109,7 @@ cat flag.txt
 
 Access:
 ```text
-http://10.10.10.25:8080/DVWA
+DVWA
 ```
 
 Read uploaded file:
@@ -218,23 +217,23 @@ whatweb example.com
 ### Parameter Tampering
 
 ```text
-movies.cehorg.com/viewprofile.aspx?id=1003
+WEB/viewprofile.aspx?id=1003
 ```
 
 Expected result:
 ```text
-linda
+
 ```
 
 ### WordPress Login Audit
 
 ```bash
-wpscan --url http://cehorg.com/ -U adam -P /path/password.txt
+wpscan --url WEB -U adam -P /path/password.txt
 ```
 
 Possible result:
 ```text
-Orange1234
+
 ```
 
 ---
@@ -260,12 +259,12 @@ phonesploit.py
 
 Connect:
 ```text
-172.16.0.21
+IP
 ```
 
 Retrieve:
 ```text
-sdcard/DCIM/capture.png
+sdcard/DCIM/
 ```
 
 ### Read Android Files
@@ -276,7 +275,6 @@ su root
 
 cd sdcard/Download
 
-cat confidential.txt
 ```
 
 ### APK Analysis
@@ -311,8 +309,7 @@ Review packets around:
 Topics:
 
 ```text
-Fleet_Count
-Data Bre@ch @lert
+
 ```
 
 ---
@@ -326,16 +323,14 @@ Tool:
 AES Tool
 ```
 
-Password:
-```text
-qwerty
+
 ```
 
 ### VeraCrypt
 
 Password:
 ```text
-test
+
 ```
 
 Count the files after mounting.
@@ -349,30 +344,27 @@ BCTextEncoder
 
 Password:
 ```text
-Pa$$w0rd
+
 ```
 
 Sample Result:
 ```text
-10.10.10.31
+
 ```
 
 ### CrypTool Challenge
 
 File:
 ```text
-cryt-128-06encr.hex
+hex
 ```
 
 Algorithm:
 ```text
-Twofish
+
 ```
 
-Recovered Text:
-```text
-@!ph@|tE*t
-```
+
 
 ---
 
