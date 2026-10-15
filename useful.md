@@ -1,5 +1,23 @@
 # CEH Practical Reference Guide
 
+Domain Discovery
+
+Find port 88 open and
+nmap -A -sV -sC IP
+
+AS-REP for password
+GetNPUsers.py
+GetNPUsers.py CEH.com/ -no-pass -usersfile /root/ADtools/users.txt -dc-ip
+
+CME rdp network -u users -p "password"
+
+Powerview.Ps1
+Get-NetComputer
+ Get-NetGroup
+powershell -EP Bypass
+Run powershell
+
+
 ## Enumeration & Reconnaissance
 
 ### Identify Live Hosts
